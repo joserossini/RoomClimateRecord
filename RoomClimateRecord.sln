@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomClimateRecord.API", "RoomclimateRecord.API\RoomClimateRecord.API.csproj", "{CF32AB26-5F29-49DC-A153-28620D9AF87F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomClimateRecord.API.Test", "RoomclimateRecord.API.Test\RoomClimateRecord.API.Test.csproj", "{145D0CE4-C079-482D-807C-3B3566BA5660}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF32AB26-5F29-49DC-A153-28620D9AF87F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF32AB26-5F29-49DC-A153-28620D9AF87F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF32AB26-5F29-49DC-A153-28620D9AF87F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF32AB26-5F29-49DC-A153-28620D9AF87F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{145D0CE4-C079-482D-807C-3B3566BA5660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{145D0CE4-C079-482D-807C-3B3566BA5660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{145D0CE4-C079-482D-807C-3B3566BA5660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{145D0CE4-C079-482D-807C-3B3566BA5660}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
