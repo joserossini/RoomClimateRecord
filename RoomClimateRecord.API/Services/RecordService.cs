@@ -12,9 +12,9 @@ namespace RoomClimateRecord.API.Services
             this.storageBroker = storageBroker;
         }
 
-        public IEnumerable<Record> GetAllRecordData()
+        public IQueryable<Record> GetAllRecordData()
         {
-            throw new NotImplementedException();
+            return this.storageBroker.GetAllRecords().AsQueryable();
         }
     }
 }

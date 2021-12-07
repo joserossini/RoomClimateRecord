@@ -11,8 +11,8 @@ public class RecordController : ControllerBase
     public IEnumerable<Record> Get()
     {
         return new Record[] {
-            new Record {Id = new Guid(), Temperature = 50f, Motion = false },
-            new Record {Id = new Guid(), Temperature = 51f, Motion = false }
+            new Record {Id = new Guid(), Temperature = 50, Motion = false },
+            new Record {Id = new Guid(), Temperature = 51, Motion = false }
         };
     }
 }
