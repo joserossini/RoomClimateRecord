@@ -1,18 +1,27 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 using RoomClimateRecord.API.Models;
+using RoomClimateRecord.API.Services;
 
 namespace RoomClimateRecord.API.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class RecordController : ControllerBase
 {
-    [HttpGet]
-    public IEnumerable<Record> Get()
+
+    public readonly IRecordService recordService;
+
+    public RecordController(IRecordService recordService)
     {
-        return new Record[] {
-            new Record {Id = new Guid(), Temperature = 50, Motion = false },
-            new Record {Id = new Guid(), Temperature = 51, Motion = false }
-        };
+        this.recordService = recordService;
+    }
+
+    [HttpGet]
+    [EnableQuery]
+    public ActionResult<IQueryable<Record>> GetRecords()
+    {
+        IQueryable<Record> result = recordService.GetAllRecordData();        
+        return Ok(result);
     }
 }

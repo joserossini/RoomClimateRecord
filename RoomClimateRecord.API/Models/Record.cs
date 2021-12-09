@@ -1,8 +1,11 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace RoomClimateRecord.API.Models
 {
 
     public class Record
     {
+        [Key]
         public Guid Id { get; set; }
         public DateTime Stamp { get; set; }
         public bool Motion { get; set; }
