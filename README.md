@@ -7,10 +7,8 @@ A .Net 6 Web API that recives records of rooms climate conditions from Iot Devic
 ## API
 | Http        | URI         | Action                 |
 | :---------- | :-------    | :--------------------- |
-| `Get`       |"api/Record" |  Returns all Record    |
+| `Get`       |"api/Record" |  Returns all Records   |
 | `Post`      |"api/Record" |  Creates a new Record  |
-
-<br><br/>
 
 ## Record Model
 
