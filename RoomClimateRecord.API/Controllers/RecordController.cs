@@ -24,4 +24,19 @@ public class RecordController : ControllerBase
         IQueryable<Record> result = recordService.GetAllRecordData();        
         return Ok(result);
     }
+
+    [HttpPost]
+    public async ValueTask<ActionResult<Record>> PostRecord([FromBody]Record record)
+    {
+        try
+        {
+            Record processRecord =  await this.recordService.PostRecord(record);
+            return Ok(processRecord);
+        }
+        catch(NotImplementedException ex)
+        {
+            return Problem(ex.Message);
+        }
+    }
+
 }

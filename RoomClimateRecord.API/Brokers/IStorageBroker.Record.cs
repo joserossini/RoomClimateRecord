@@ -6,7 +6,7 @@ namespace RoomClimateRecord.API.Brokers
     {
         IQueryable<Record> GetAllRecords();
         ValueTask<Record> GetRecordAsync(Guid Id);
-        ValueTask<Record> InsertRecordAsync(Record device);
+        ValueTask<Record> InsertRecordAsync(Record record);
 
     }
 }

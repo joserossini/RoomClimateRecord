@@ -7,10 +7,11 @@ namespace RoomClimateRecord.API.Models
     {
         [Key]
         public Guid Id { get; set; }
+        [Required]
         public DateTime Stamp { get; set; }
-        public bool Motion { get; set; }
-        public short Temperature { get; set; }
-        public short Humidity { get; set; }
+        public Nullable<bool> Motion { get; set; }
+        public Nullable<short> Temperature { get; set; }
+        public Nullable<short> Humidity { get; set; }
         
     }
 

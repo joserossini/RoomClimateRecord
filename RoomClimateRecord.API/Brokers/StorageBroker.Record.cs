@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using RoomClimateRecord.API.Models;
 
 namespace RoomClimateRecord.API.Brokers
@@ -14,10 +15,13 @@ namespace RoomClimateRecord.API.Brokers
         public async ValueTask<Record> GetRecordAsync(Guid Id) =>
            await this.records.FindAsync(Id);
 
-        public async ValueTask<Record> InsertRecordAsync(Record device)
+        public async ValueTask<Record> InsertRecordAsync(Record record)
         {
-            throw new NotImplementedException();
+            EntityEntry<Record> insertedRecord = await this.records.AddAsync(record);
+            await this.SaveChangesAsync();
+            return insertedRecord.Entity;
         }
+
     }
 
 }
